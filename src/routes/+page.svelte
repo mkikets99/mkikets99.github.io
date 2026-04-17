@@ -146,10 +146,10 @@
 	<h2 class="text-3xl font-bold">Selected Projects</h2>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 		{#each projects as project}
+			{@const ProjectIcon = project.icon}
 			<div class="bg-surface-900 border border-surface-800 p-6 rounded-xl hover:border-primary-500 transition-all flex flex-col justify-between group">
 				<div class="space-y-4">
 					<!-- Project Icon/Image Placeholder -->
-					{@const ProjectIcon = project.icon}
 					<div class="w-12 h-12 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500 mb-2 group-hover:bg-primary-500 group-hover:text-surface-950 transition-colors">
 						<ProjectIcon size={28} />
 					</div>
