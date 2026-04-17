@@ -7,8 +7,25 @@
 </script>
 
 <svelte:head>
-	<title>Mykola Kikets | Portfolio</title>
+	<title>Mykola Kikets | Software Engineer</title>
 	<link rel="icon" href={favicon} />
+	<link rel="canonical" href="https://mkikets99.github.io/" />
+
+	<!-- Structured Data (JSON-LD) -->
+	{@html `<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Mykola Kikets",
+		"jobTitle": "Software Engineer",
+		"url": "https://mkikets99.github.io/",
+		"sameAs": [
+			"https://github.com/mkikets99",
+			"https://linkedin.com/in/mykola-kikets"
+		],
+		"knowsAbout": ["Svelte", "TypeScript", "Go", "Distributed Systems", "Cloud Architecture"]
+	}
+	</script>`}
 </svelte:head>
 
 <div class="h-screen flex flex-col bg-surface-950 text-surface-50 overflow-hidden">
