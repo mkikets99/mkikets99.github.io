@@ -111,8 +111,9 @@
 			<h3 class="text-xl font-bold">Core Skills</h3>
 			<div class="flex flex-wrap gap-3">
 				{#each skills as skill}
+					{@const Icon = skill.icon}
 					<span class="bg-surface-800 px-3 py-1.5 rounded-full text-sm border border-surface-700 flex items-center gap-2">
-						<svelte:component this={skill.icon} size={14} />
+						<Icon size={14} />
 						{skill.name}
 					</span>
 				{/each}
@@ -148,8 +149,9 @@
 			<div class="bg-surface-900 border border-surface-800 p-6 rounded-xl hover:border-primary-500 transition-all flex flex-col justify-between group">
 				<div class="space-y-4">
 					<!-- Project Icon/Image Placeholder -->
+					{@const ProjectIcon = project.icon}
 					<div class="w-12 h-12 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500 mb-2 group-hover:bg-primary-500 group-hover:text-surface-950 transition-colors">
-						<svelte:component this={project.icon} size={28} />
+						<ProjectIcon size={28} />
 					</div>
 					
 					<h3 class="text-xl font-bold flex items-center justify-between">
@@ -161,8 +163,9 @@
 					
 					<div class="flex flex-wrap gap-3">
 						{#each project.tags as tag}
+							{@const TagIcon = tag.icon}
 							<span class="text-xs text-primary-400 uppercase tracking-wider font-semibold flex items-center gap-1.5">
-								<svelte:component this={tag.icon} size={12} />
+								<TagIcon size={12} />
 								{tag.name}
 							</span>
 						{/each}
