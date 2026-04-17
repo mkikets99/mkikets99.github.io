@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { 
-		Github, 
 		ExternalLink, 
 		Code2, 
 		Layers, 
@@ -13,6 +12,9 @@
 		Briefcase,
 		Calendar
 	} from 'lucide-svelte';
+
+	// GitHub SVG Component
+	import GithubIcon from '$lib/components/GithubIcon.svelte';
 
 	const projects = [
 		{
@@ -86,7 +88,7 @@
 	</p>
 	<div class="flex justify-center gap-4">
 		<a href="#projects" class="btn bg-primary-500 hover:bg-primary-600 text-surface-950 font-bold px-8 py-3 rounded-lg flex items-center gap-2">
-			<Github size={20} /> View Projects
+			<GithubIcon size={20} /> View Projects
 		</a>
 		<a href="mailto:contact@example.com" class="btn border border-surface-700 hover:bg-surface-800 px-8 py-3 rounded-lg">
 			Contact Me
@@ -126,16 +128,13 @@
 		<div class="relative group">
 			<!-- Round Photo Placeholder -->
 			<div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-primary-500/30 overflow-hidden shadow-2xl relative transition-transform group-hover:scale-[1.02]">
-				<!-- Replace src with your actual photo URL -->
 				<img 
 					src="https://api.dicebear.com/7.x/avataaars/svg?seed=M" 
 					alt="M. Kikets" 
 					class="w-full h-full object-cover bg-surface-800"
 				/>
-				<!-- Decorative Ring -->
 				<div class="absolute inset-0 border-2 border-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
 			</div>
-			<!-- Background Glow -->
 			<div class="absolute -inset-4 bg-primary-500/20 blur-3xl rounded-full -z-10 animate-pulse"></div>
 		</div>
 	</div>
@@ -149,7 +148,6 @@
 			{@const ProjectIcon = project.icon}
 			<div class="bg-surface-900 border border-surface-800 p-6 rounded-xl hover:border-primary-500 transition-all flex flex-col justify-between group">
 				<div class="space-y-4">
-					<!-- Project Icon/Image Placeholder -->
 					<div class="w-12 h-12 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500 mb-2 group-hover:bg-primary-500 group-hover:text-surface-950 transition-colors">
 						<ProjectIcon size={28} />
 					</div>
@@ -173,7 +171,7 @@
 				</div>
 				
 				<a href={project.link} target="_blank" rel="noreferrer" class="mt-8 btn bg-surface-800 hover:bg-surface-700 w-full py-2.5 rounded text-center font-medium flex items-center justify-center gap-2">
-					<Github size={18} /> View Repository
+					<GithubIcon size={18} /> View Repository
 				</a>
 			</div>
 		{/each}
